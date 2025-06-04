@@ -1,0 +1,237 @@
+.navbar {
+    position: fixed; /* Makes the navbar fixed */
+    top: 0; /* Positions it at the top of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Ensures it spans the full width of the page */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #333; /* Background color for the navbar */
+    padding: 1em; /* Adds some padding */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Aligns items vertically */
+    color: #fff; /* Text color */
+}
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adds spacing between links */
+    margin: 0;
+    padding-right: 20px;
+}
+.nav-links li {
+    margin-right: 20px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #0024f0; /* Changes color on hover */
+}
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+ul li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+ul li::before{
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: #4caf50;
+    animation: bounce 2s ease-in-out;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 3;
+        transform: translateX(0);
+    }
+}
+@keyframes bounce{
+    0% {
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(2.0);
+    }
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;   /* Push content to the right */
+    align-items: center;
+    
+}
+h2{
+    margin-bottom: 80px;
+    font-size: 50px;
+}
+.text-content {
+    width: 40%;
+    padding-left: 60px;
+    color: #000000;
+    order: 1; /* Keep text left */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+.image-box {
+    width: 500px;
+    height: 100%;
+    border: 5px solid #333;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    background:#000000;
+    order: 2; /* Image on the right */
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-top: 10px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition:
+        opacity 0.7s,
+        transform 0.7s;
+    transform: scale(0.95) rotateY(0deg) rotateZ(0deg);
+    z-index: 1;
+}
+.image-box img.active {
+    opacity: 1;
+    z-index: 2;
+    /* Add a random rotation and scale for each transition */
+    animation: angleTransition 2s;
+}
+
+body {
+    /* Dynamic gradient background that works well with most images */
+    background-color: hsl(120, 20%, 80%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design: Mobile First */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+    .nav-logo {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-right: 0;
+        width: 100%;
+        display: flex;
+    }
+    .nav-links li {
+        margin-right: 0;
+    }
+    .container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 60vh;
+        padding: 1em 0;
+        margin-top: 70px;
+        gap: 10px;
+    }
+    .text-content {
+        width: 60%;
+        padding-left: 10px;
+        font-size: 1em;
+        margin-bottom: 0;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%; /* Ensures text-content fills container height */
+    }
+    .image-box {
+        width: 40%;
+        height: 100%; /* Ensures image-box matches text-content height */
+        margin-top: 0;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.3em 0.5em;
+    }
+    .nav-logo {
+        font-size: 1em;
+    }
+    .image-box {
+        min-height: 140px;
+        height: 140px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* Desktop: Ensure layout remains wide and spaced */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    .text-content {
+        width: 40%;
+        padding-left: 60px;
+        font-size: medium;
+    }
+    .image-box {
+        width: 500px;
+        height: 100%;
+    }
+    h2 {
+        font-size: 50px;
+        margin-bottom: 80px;
+    }
+}
