@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+}
+
+.hero {
+    background-image:url(../images/OOJN5747.JPG); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.navbar {
+    position: fixed; /* Makes the navbar fixed */
+    top: 0; /* Positions it at the top of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Ensures it spans the full width of the page */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #333; /* Background color for the navbar */
+    padding: 1em; /* Adds some padding */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Aligns items vertically */
+    color: #fff; /* Text color */
+}
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adds spacing between links */
+    margin: 0;
+    padding-right: 20px;
+}
+.nav-links li {
+    margin-right: 20px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #0024f0; /* Changes color on hover */
+}
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+ul li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+ul li::before{
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: #4caf50;
+    animation: bounce 2s ease-in-out;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 3;
+        transform: translateX(0);
+    }
+}
+@keyframes bounce{
+    0% {
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(2.0);
+    }
+}
+.text-overlay1,
+.text-overlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90vw;
+    max-width: 95vw;
+    word-break: break-word;
+}
+
+.text-overlay1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Remove padding-top */
+}
+
+.text-overlay2 {
+    color: #010c6e;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Remove padding-top */
+}
+
+/* Responsive Design: Mobile First */
+@media (max-width: 768px) {
+    html, body {
+        height: 100%;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        padding: 0.5em 1em;
+    }
+    .nav-logo {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+    .nav-links {
+        flex-direction: row; /* Make links horizontal */
+        justify-content: center; /* Center links horizontally */
+        align-items: center;
+        gap: 10px;
+        padding-right: 0;
+        width: 100%;
+    }
+    .nav-links li {
+        margin-right: 0;
+    }
+    .hero {
+        min-height: 100vh;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    .text-overlay1,
+    .text-overlay2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90vw;
+        max-width: 95vw;
+        word-break: break-word;
+        padding-top: 0;
+        font-size: 1.2em;
+    }
+    .text-overlay1 {
+        font-size: 2em;
+    }
+    .text-overlay2 {
+        font-size: 1.1em;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.3em 0.5em;
+    }
+    .nav-logo {
+        font-size: 1em;
+    }
+    .hero {
+        height: 40vh;
+    }
+    .text-overlay1 {
+        top: 25%;
+        font-size: 1.2em;
+        padding-top: 20px;
+    }
+    .text-overlay2 {
+        top: 35%;
+        font-size: 0.9em;
+        padding-top: 30px;
+    }
+}
+
+/* Desktop: Ensure layout remains wide and spaced */
+@media (min-width: 769px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 1em;
+    }
+    .nav-logo {
+        font-size: 1.5em;
+    }
+    .nav-links {
+        flex-direction: row;
+        gap: 20px;
+        padding-right: 20px;
+    }
+    .nav-links li {
+        margin-right: 20px;
+    }
+    .hero {
+        height: 100vh;
+    }
+    .text-overlay1 {
+        left: 580px;
+        top: 38%;
+        font-size: 300%;
+        padding-top: 100px;
+    }
+    .text-overlay2 {
+        left: 580px;
+        top: 45%;
+        font-size: 150%;
+        padding-top: 150px;
+    }
+}
+
+/* Center .container in the viewport */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw;
+    flex-direction: column; /* Stack children vertically */
+    text-align: center;
+}
+
+
