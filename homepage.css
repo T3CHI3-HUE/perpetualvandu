@@ -136,26 +136,26 @@ ul li::before{
     align-items: center;
     justify-content: center;
     padding: 24px;
-    width: 98vw;
-    height: 60vh;
-    min-height: 350px;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
   }
 
   .navbar {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 16px;
-        box-sizing: border-box;
-    }
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
 
-    body {
-        padding: 16px;
-        box-sizing: border-box;
-    }
+  body {
+    padding: 16px;
+    box-sizing: border-box;
+  }
 
   .text-overlay1 {
     position: absolute;
@@ -167,7 +167,7 @@ ul li::before{
 
   .text-overlay2 {
     position: absolute;
-    top: 55%; /* Pushes it further below text-overlay1 */
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.2em;
