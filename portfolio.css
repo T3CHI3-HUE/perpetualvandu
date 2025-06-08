@@ -230,5 +230,15 @@ h2{
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
+
+  .contact-area {
+    background-image: url('images/IMG_2887.JPG');
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 

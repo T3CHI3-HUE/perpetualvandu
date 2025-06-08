@@ -196,37 +196,33 @@ border-radius: 5px;
     padding: 16px;
     box-sizing: border-box;
     font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; /* Align all sections to the left */
+    justify-content: flex-start;
     padding: 16px;
     width: 100%;
     box-sizing: border-box;
   }
 
-  .navbar {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  .education,
+  .skills {
+    align-self: flex-start; /* Place on the left side */
     width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    font-size: 0.95em;
   }
 
-  .nav-links {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    font-size: 0.95em;
+  .skill-bar {
+    width: 90%; /* Stretch the skill bar */
+    min-width: 180px;
+    max-width: 400px;
+    margin: 4px 0;
   }
 
   h1, h2, h3, h4, h5, h6, p, li, a, span {

@@ -130,17 +130,19 @@ ul li::before{
 }
 
 @media (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        width: 100%;
-        box-sizing: border-box;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    width: 98vw;
+    height: 60vh;
+    min-height: 350px;
+    box-sizing: border-box;
+  }
 
-    .navbar {
+  .navbar {
         position: static;
         flex-direction: row;
         justify-content: center;
@@ -154,5 +156,21 @@ ul li::before{
         padding: 16px;
         box-sizing: border-box;
     }
+
+  .text-overlay1 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
+
+  .text-overlay2 {
+    position: absolute;
+    top: 55%; /* Pushes it further below text-overlay1 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+  }
 }
 
