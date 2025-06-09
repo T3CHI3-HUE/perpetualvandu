@@ -129,7 +129,7 @@ ul li::before{
     word-break: break-word;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .container {
     display: flex;
     flex-direction: column;
