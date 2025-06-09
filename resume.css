@@ -196,37 +196,32 @@ border-radius: 5px;
     padding: 16px;
     box-sizing: border-box;
     font-size: 0.9em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align all sections to the left */
+    align-items: flex-start;
     justify-content: flex-start;
-    padding: 16px;
-    width: 100%;
+    padding: 8px;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
     box-sizing: border-box;
+    margin: 0;
   }
 
-  .education,
-  .skills {
-    align-self: flex-start; /* Place on the left side */
+  .summary {
+    margin-top: 24px !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     width: 100%;
   }
 
-  .skill-bar {
-    width: 90%; /* Stretch the skill bar */
-    min-width: 180px;
-    max-width: 400px;
-    margin: 4px 0;
-  }
-
-  h1, h2, h3, h4, h5, h6, p, li, a, span {
-    font-size: 90%;
+  * {
+    margin: 0 !important;
   }
 }
 
